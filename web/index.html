@@ -49,7 +49,7 @@
 	</div>
 
 	<!-- Home Section -->
-	<section id="home" class="tt-fullHeight" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
+	<section  id="home" class="tt-fullHeight" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
 		<div class="intro">
 			<div class="intro-sub">{{'banner_title' | translate}}</div>
 			<h1>{{'banner_SubTitle1' | translate}} <span>{{'banner_SubTitle2' | translate}}</span></h1>
@@ -69,8 +69,6 @@
 			<div class="wheel"></div>
 		</div>
 	</section><!-- End Home Section -->
-
-
 
 
 	<!-- Navigation -->
@@ -104,7 +102,7 @@
 
 
     <!-- About Section -->
-    <section id="about" class="about-section section-padding">
+    <section  ng-if="about_section_enabled" id="about" class="about-section section-padding">
       <div class="container">
         <h2 class="section-title wow fadeInUp">{{'about_title' | translate}}</h2>
 
@@ -159,9 +157,8 @@
       </div> <!-- /.container -->
     </section><!-- End About Section -->
 
-
     <!-- Video Section -->
-    <section id="video" class="video-section">
+    <section ng-if="video_section_enabled" id="video" class="video-section">
       <div class="tf-bg-overlay">
 
         <div class="container">
@@ -181,41 +178,49 @@
 
 
     <!-- Resume Section -->
-    <section id="resume" class="resume-section section-padding">
+    <section ng-if="resume_section_enabled" id="resume" class="resume-section section-padding">
         <div class="container">
             <h2 class="section-title wow fadeInUp">{{'resume_title' | translate}}</h2>
             <div class="row">
                 <div class="col-md-12">
                     <div class="resume-title">
-                        <h3>{{'resume_section1_title' | translate}}</h3>
-                    </div>
-
-                    <link rel="import" href="assets/include/resume_education.html">
-                    <p class="inc:assets/include/resume_education.html"></p>
-                </div>
-            </div><!-- /row -->
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="resume-title">
-                        <h3>Experience</h3>
+                        <h3>{{'resume_education_title' | translate}}</h3>
                     </div>
                     <div class="resume">
                         <ul class="timeline">
-                            <li class="timeline-inverted">
+                            <li>
                                 <div class="posted-date">
-                                  <span class="month">2011-2013</span>
+                                    <span class="month">{{'resume_education_range_1' | translate}}</span>
                                 </div><!-- /posted-date -->
 
                                 <div class="timeline-panel wow fadeInUp">
                                     <div class="timeline-content">
                                         <div class="timeline-heading">
-                                            <h3>Junior ui designer</h3>
-                                            <span>XYZ Design Home, One Street, Boston</span>
+                                            <h3>{{'resume_education_title_1' | translate}}</h3>
+                                            <span>{{'resume_education_sub_title_1' | translate}}</span>
                                         </div><!-- /timeline-heading -->
 
                                         <div class="timeline-body">
-                                            <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+                                            <p>{{'resume_education_description_1' | translate}}</p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div><!-- /timeline-panel -->
+                            </li>
+
+                            <li class="timeline-inverted">
+                                <div class="posted-date">
+                                    <span class="month">{{'resume_education_range_2' | translate}}</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3>{{'resume_education_title_2' | translate}}</h3>
+                                            <span>{{'resume_education_sub_title_2' | translate}}</span>
+                                        </div><!-- /timeline-heading -->
+
+                                        <div class="timeline-body">
+                                            <p>{{'resume_education_description_2' | translate}}</p>
                                         </div><!-- /timeline-body -->
                                     </div> <!-- /timeline-content -->
                                 </div> <!-- /timeline-panel -->
@@ -223,18 +228,67 @@
 
                             <li>
                                 <div class="posted-date">
-                                  <span class="month">2013-2015</span>
+                                    <span class="month">{{'resume_education_range_3' | translate}}</span>
                                 </div><!-- /posted-date -->
 
                                 <div class="timeline-panel wow fadeInUp">
                                     <div class="timeline-content">
                                         <div class="timeline-heading">
-                                            <h3>Lead UX Consultant</h3>
-                                            <span>Lucky8 Designing Firm, California</span>
+                                            <h3>{{'resume_education_title_3' | translate}}</h3>
+                                            <span>{{'resume_education_sub_title_3' | translate}}</span>
                                         </div><!-- /timeline-heading -->
 
                                         <div class="timeline-body">
-                                            <p>Completely provide access to seamless manufactured products before functionalized synergy. Progressively redefine competitive.</p>
+                                            <p>{{'resume_education_description_3' | translate}}</p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div><!-- /timeline-panel -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- /row -->
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="resume-title">
+                        <h3>{{'resume_jobs_title' | translate}}</h3>
+                    </div>
+                    <div class="resume">
+                        <ul class="timeline">
+                            <li class="timeline-inverted">
+                                <div class="posted-date">
+                                    <span class="month">{{'resume_jobs_range_1' | translate}}</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3>{{'resume_jobs_title_1' | translate}}</h3>
+                                            <span>{{'resume_jobs_sub_title_1' | translate}}</span>
+                                        </div><!-- /timeline-heading -->
+
+                                        <div class="timeline-body">
+                                            <p>{{'resume_jobs_description_1' | translate}}</p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div> <!-- /timeline-panel -->
+                            </li>
+
+                            <li>
+                                <div class="posted-date">
+                                    <span class="month">{{'resume_jobs_range_2' | translate}}</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3>{{'resume_jobs_title_2' | translate}}</h3>
+                                            <span>{{'resume_jobs_sub_title_2' | translate}}</span>
+                                        </div><!-- /timeline-heading -->
+
+                                        <div class="timeline-body">
+                                            <p>{{'resume_jobs_description_2' | translate}}</p>
                                         </div><!-- /timeline-body -->
                                     </div> <!-- /timeline-content -->
                                 </div><!-- /timeline-panel -->
@@ -248,31 +302,31 @@
 
 
     <!-- Skills Section -->
-    <section id="skills" class="skills-section section-padding">
+    <section ng-if="skills_section_enabled" id="skills" class="skills-section section-padding">
       <div class="container">
-        <h2 class="section-title wow fadeInUp">Skills</h2>
+        <h2 class="section-title wow fadeInUp">{{'skill_title_1' | translate}}</h2>
 
         <div class="row">
           <div class="col-md-6">
             <div class="skill-progress">
-              <div class="skill-title"><h3>UX Design</h3></div> 
+              <div class="skill-title"><h3>{{skill_name_1}}</h3></div>
               <div class="progress">
-                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" ><span>95%</span>
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="{{skill_value_1}}" aria-valuemin="0" aria-valuemax="100" ><span>{{skill_value_label_1}}</span>
                 </div>
               </div><!-- /.progress -->
             </div><!-- /.skill-progress -->
 
             <div class="skill-progress">
-              <div class="skill-title"><h3>Visual Design</h3></div> 
-              <div class="progress">
-                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" ><span>80%</span>
+                <div class="skill-title"><h3>{{skill_name_2}}</h3></div>
+                <div class="progress">
+                    <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="{{skill_value_2}}" aria-valuemin="0" aria-valuemax="100" ><span>{{skill_value_label_2}}</span>
                 </div>
               </div><!-- /.progress -->
             </div><!-- /.skill-progress -->
             <div class="skill-progress">
-              <div class="skill-title"><h3>Business Design</h3></div>  
-              <div class="progress">
-                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" ><span>75%</span>
+                <div class="skill-title"><h3>{{skill_name_3}}</h3></div>
+                <div class="progress">
+                    <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="{{skill_value_3}}" aria-valuemin="0" aria-valuemax="100" ><span>{{skill_value_label_3}}</span>
                 </div>
               </div><!-- /.progress -->
             </div><!-- /.skill-progress -->
@@ -280,23 +334,23 @@
 
           <div class="col-md-6">
             <div class="skill-progress">
-              <div class="skill-title"><h3>Branding Design</h3></div> 
-              <div class="progress">
-                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" ><span>95%</span>
+                <div class="skill-title"><h3>{{skill_name_4}}</h3></div>
+                <div class="progress">
+                    <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="{{skill_value_4}}" aria-valuemin="0" aria-valuemax="100" ><span>{{skill_value_label_4}}</span>
                 </div>
               </div><!-- /.progress -->
             </div><!-- /.skill-progress -->
             <div class="skill-progress">
-              <div class="skill-title"><h3>Motion Graphic</h3></div> 
-              <div class="progress">
-                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" ><span>80%</span>
+                <div class="skill-title"><h3>{{skill_name_5}}</h3></div>
+                <div class="progress">
+                    <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="{{skill_value_5}}" aria-valuemin="0" aria-valuemax="100" ><span>{{skill_value_label_5}}</span>
                 </div>
               </div><!-- /.progress -->
             </div><!-- /.skill-progress -->
             <div class="skill-progress">
-              <div class="skill-title"><h3>Flyers Designing</h3></div>  
-              <div class="progress">
-                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" ><span>75%</span>
+                <div class="skill-title"><h3>{{skill_name_6}}</h3></div>
+                <div class="progress">
+                    <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="{{skill_value_6}}" aria-valuemin="0" aria-valuemax="100" ><span>{{skill_value_label_6}}</span>
                 </div>
               </div><!-- /.progress -->
             </div><!-- /.skill-progress -->
@@ -304,55 +358,55 @@
         </div><!-- /.row -->
 
         <div class="skill-chart text-center">
-          <h3>More skills</h3>
+          <h3>{{'skill_title_2' | translate}}</h3>
         </div>
           
         <div class="row more-skill text-center">
           <div class="col-xs-12 col-sm-4 col-md-2">
-              <div class="chart" data-percent="91" data-color="e74c3c">
+              <div class="chart" data-percent="{{skill_value_7}}" data-color="e74c3c">
                     <span class="percent"></span>
                     <div class="chart-text">
-                      <span>leadership</span>
+                      <span>{{skill_name_7}}</span>
                     </div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-2">
-              <div class="chart" data-percent="23" data-color="2ecc71">
+              <div class="chart" data-percent="{{skill_value_8}}" data-color="2ecc71">
                     <span class="percent"></span>
                     <div class="chart-text">
-                      <span>Creativity</span>
+                      <span>{{skill_name_8}}</span>
                     </div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-2">
-              <div class="chart" data-percent="68" data-color="3498db">
+              <div class="chart" data-percent="{{skill_value_9}}" data-color="3498db">
                     <span class="percent"></span>
                     <div class="chart-text">
-                      <span>Management</span>
+                      <span>{{skill_name_9}}</span>
                     </div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-2">
-              <div class="chart" data-percent="68" data-color="3498db">
+              <div class="chart" data-percent="{{skill_value_10}}" data-color="3498db">
                     <span class="percent"></span>
                     <div class="chart-text">
-                      <span>Branding</span>
+                      <span>{{skill_name_10}}</span>
                     </div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-2">
-              <div class="chart" data-percent="68" data-color="3498db">
+              <div class="chart" data-percent="{{skill_value_11}}" data-color="3498db">
                     <span class="percent"></span>
                     <div class="chart-text">
-                      <span>Marketing</span>
+                      <span>{{skill_name_11}}</span>
                     </div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-2">
-              <div class="chart" data-percent="68" data-color="3498db">
+              <div class="chart" data-percent="{{skill_value_12}}" data-color="3498db">
                     <span class="percent"></span>
                     <div class="chart-text">
-                      <span>Motivation</span>
+                      <span>{{skill_name_12}}</span>
                     </div>
                 </div>
             </div>
@@ -363,7 +417,7 @@
 
 
     <!-- Works Section -->
-    <section id="works" class="works-section section-padding">
+    <section ng-if="works_section_enabled" id="works" class="works-section section-padding">
       <div class="container">
         <h2 class="section-title wow fadeInUp">Works</h2>
 
@@ -392,8 +446,6 @@
                 </div><!-- /.portfolio -->
               </div><!-- /.portfolio-bg -->
             </div><!-- /.portfolio-item -->
-
-
             <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "identety", "web"]'>
               <div class="portfolio-bg">
                 <div class="portfolio">
@@ -506,7 +558,7 @@
 
 
     <!-- Facts Section -->
-    <section id="facts" class="facts-section text-center" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
+    <section ng-if="facts_section_enabled" id="facts" class="facts-section text-center" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
       <div class="tt-overlay-bg">
         <div class="container">
           <div class="row">
@@ -541,7 +593,7 @@
 
 
     <!-- Blog Section -->
-    <section id="blog" class="latest-blog-section section-padding">
+    <section ng-if="blog_section_enabled" id="blog" class="latest-blog-section section-padding">
       <div class="container">
         <h2 class="section-title wow fadeInUp">Latest Post</h2>
 
@@ -685,7 +737,7 @@
 
 
     <!-- Hire Section -->
-    <section class="hire-section text-center" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
+    <section ng-if="hire_section_enabled" class="hire-section text-center" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
       <div class="hire-section-bg">
         <div class="container">
           <div class="row">
@@ -701,7 +753,7 @@
 
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section section-padding">
+    <section ng-if="contact_section_enabled" id="contact" class="contact-section section-padding">
       <div class="container">
         <h2 class="section-title wow fadeInUp">Get in touch</h2>
 
@@ -772,7 +824,7 @@
 
 
 	<!-- Footer Section -->
-    <footer class="footer-wrapper">
+    <footer ng-if="footer_section_enabled" class="footer-wrapper">
       <div class="container">
         <div class="row">
           <div class="col-md-12">

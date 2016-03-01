@@ -4,6 +4,19 @@
 angular.module('SmrWebSite.Main',  ['pascalprecht.translate'])
 
     .controller('MainCtrl', function($scope) {
+        //Section visibility
+        $scope.about_section_enabled    = true;
+        $scope.video_section_enabled    = true;
+        $scope.resume_section_enabled   = true;
+        $scope.skills_section_enabled   = true;
+        $scope.works_section_enabled    = false;
+        $scope.facts_section_enabled    = true;
+        $scope.blog_section_enabled     = true;
+        $scope.hire_section_enabled     = true;
+        $scope.contact_section_enabled  = true;
+        $scope.footer_section_enabled   = true;
+
+        //static variable
         $scope.email = "simone.migliore@gmail.com";
         $scope.cv_path="#";
         $scope.youtube_path="#";
@@ -14,6 +27,49 @@ angular.module('SmrWebSite.Main',  ['pascalprecht.translate'])
         $scope.google = "https://plus.google.com/u/0/+SimoneMigliore/posts";
         $scope.linkedin = "https://www.linkedin.com/in/simone-migliore-2364524b?trk=hp-identity-name";
 
+        //skill Percentage bar
+        $scope.skill_name_1 = "Angular",
+        $scope.skill_value_1 = 15,
+        $scope.skill_value_label_1 = "15%",
+
+        $scope.skill_name_2 = "Angular",
+        $scope.skill_value_2 = 45,
+        $scope.skill_value_label_2 = "45%",
+
+        $scope.skill_name_3 = "Angular",
+        $scope.skill_value_3 = 5,
+        $scope.skill_value_label_3 = "5%",
+
+        $scope.skill_name_4 = "Angular",
+        $scope.skill_value_4 = 95,
+        $scope.skill_value_label_4 = "95%",
+
+        $scope.skill_name_5 = "Angular",
+        $scope.skill_value_5 = 44,
+        $scope.skill_value_label_5 = "44%",
+
+        $scope.skill_name_6 = "Angular",
+        $scope.skill_value_6 = 78,
+        $scope.skill_value_label_6 = "78%",
+
+        //skill Percentage Circular
+        $scope.skill_name_7 = "Angular",
+        $scope.skill_value_7 = 15,
+
+        $scope.skill_name_8 = "Angular",
+        $scope.skill_value_8 = 45,
+
+        $scope.skill_name_9 = "Angular",
+        $scope.skill_value_9 = 5,
+
+        $scope.skill_name_10 = "Angular",
+        $scope.skill_value_10 = 95,
+
+        $scope.skill_name_11 = "Angular",
+        $scope.skill_value_11 = 44,
+
+        $scope.skill_name_12 = "Angular",
+        $scope.skill_value_12 = 78
     })
 
     .config(function($translateProvider){
@@ -69,22 +125,41 @@ angular.module('SmrWebSite.Main',  ['pascalprecht.translate'])
                 about_cv_button:"Scarica il mio CV",
 
                 //Video Section
-                video_title:"Video Introducing",
+                video_title:"Video in lavorazione...",
 
                 //Resume Section
                 resume_title:"Sommario",
-                resume_section1_title:"Educazione",
+                resume_education_title:"Educazione",
+                resume_jobs_title:"Esperienze",
+                //------- education group
+                resume_education_range_1:"2007-2011",
+                resume_education_title_1:"Bachelor degree certificate",
+                resume_education_sub_title_1:"BA(Hons) in UI Engineering, Arts University, Pabna, USA",
+                resume_education_description_1:"I have completed UI Engineering degree from ABC University, Boston, USA at feel the charm of existence in this spot, which was creat.",
+                resume_education_range_2:"2007-2011",
+                resume_education_title_2:"Bachelor degree certificate",
+                resume_education_sub_title_2:"BA(Hons) in UI Engineering, Arts University, Pabna, USA",
+                resume_education_description_2:"I have completed UI Engineering degree from ABC University, Boston, USA at feel the charm of existence in this spot, which was creat.",
+                resume_education_range_3:"2007-2011",
+                resume_education_title_3:"Bachelor degree certificate",
+                resume_education_sub_title_3:"BA(Hons) in UI Engineering, Arts University, Pabna, USA",
+                resume_education_description_3:"I have completed UI Engineering degree from ABC University, Boston, USA at feel the charm of existence in this spot, which was creat.",
+                //------- Jobs group
+                resume_jobs_range_1:"2007-2011",
+                resume_jobs_title_1:"Bachelor degree certificate",
+                resume_jobs_sub_title_1:"BA(Hons) in UI Engineering, Arts University, Pabna, USA",
+                resume_jobs_description_1:"I have completed UI Engineering degree from ABC University, Boston, USA at feel the charm of existence in this spot, which was creat.",
+                resume_jobs_range_2:"2007-2011",
+                resume_jobs_title_2:"Bachelor degree certificate",
+                resume_jobs_sub_title_2:"BA(Hons) in UI Engineering, Arts University, Pabna, USA",
+                resume_jobs_description_2:"I have completed UI Engineering degree from ABC University, Boston, USA at feel the charm of existence in this spot, which was creat.",
 
-
-
+                //Skill Section
+                skill_title_1:"Competenze Principali",
+                skill_title_2:"Competenze secondarie",
 
                 //mywork Section
                 mywork_title:"Il mio Lavoro",
-
-                //Skill Section
-                skill_title:"Competenze",
-                skill_subTitle:"Tecnologie adottate durante il mio percorso lavorativo",
-
                 //Contact Section
                 contact_title:"Contatti",
                 contact_sendMessage:"Invia Messaggio",
