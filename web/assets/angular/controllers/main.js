@@ -28,48 +28,55 @@ angular.module('SmrWebSite.Main',  ['pascalprecht.translate'])
         $scope.linkedin = "https://www.linkedin.com/in/simone-migliore-2364524b?trk=hp-identity-name";
 
         //skill Percentage bar
-        $scope.skill_name_1 = "Angular",
-        $scope.skill_value_1 = 15,
-        $scope.skill_value_label_1 = "15%",
+        $scope.skill_name_1 = "Angular";
+        $scope.skill_value_1 = 15;
+        $scope.skill_value_label_1 = "15%";
 
-        $scope.skill_name_2 = "Angular",
-        $scope.skill_value_2 = 45,
-        $scope.skill_value_label_2 = "45%",
+        $scope.skill_name_2 = "Angular";
+        $scope.skill_value_2 = 45;
+        $scope.skill_value_label_2 = "45%";
 
-        $scope.skill_name_3 = "Angular",
-        $scope.skill_value_3 = 5,
-        $scope.skill_value_label_3 = "5%",
+        $scope.skill_name_3 = "Angular";
+        $scope.skill_value_3 = 5;
+        $scope.skill_value_label_3 = "5%";
 
-        $scope.skill_name_4 = "Angular",
-        $scope.skill_value_4 = 95,
-        $scope.skill_value_label_4 = "95%",
+        $scope.skill_name_4 = "Angular";
+        $scope.skill_value_4 = 95;
+        $scope.skill_value_label_4 = "95%";
 
-        $scope.skill_name_5 = "Angular",
-        $scope.skill_value_5 = 44,
-        $scope.skill_value_label_5 = "44%",
+        $scope.skill_name_5 = "Angular";
+        $scope.skill_value_5 = 44;
+        $scope.skill_value_label_5 = "44%";
 
-        $scope.skill_name_6 = "Angular",
-        $scope.skill_value_6 = 78,
-        $scope.skill_value_label_6 = "78%",
+        $scope.skill_name_6 = "Angular";
+        $scope.skill_value_6 = 78;
+        $scope.skill_value_label_6 = "78%";
 
         //skill Percentage Circular
-        $scope.skill_name_7 = "Angular",
-        $scope.skill_value_7 = 15,
+        $scope.skill_name_7 = "Angular";
+        $scope.skill_value_7 = 15;
 
-        $scope.skill_name_8 = "Angular",
-        $scope.skill_value_8 = 45,
+        $scope.skill_name_8 = "Angular";
+        $scope.skill_value_8 = 45;
 
-        $scope.skill_name_9 = "Angular",
-        $scope.skill_value_9 = 5,
+        $scope.skill_name_9 = "Angular";
+        $scope.skill_value_9 = 5;
 
-        $scope.skill_name_10 = "Angular",
-        $scope.skill_value_10 = 95,
+        $scope.skill_name_10 = "Angular";
+        $scope.skill_value_10 = 95;
 
-        $scope.skill_name_11 = "Angular",
-        $scope.skill_value_11 = 44,
+        $scope.skill_name_11 = "Angular";
+        $scope.skill_value_11 = 44;
 
-        $scope.skill_name_12 = "Angular",
-        $scope.skill_value_12 = 78
+        $scope.skill_name_12 = "Angular";
+        $scope.skill_value_12 = 78;
+        
+        //Fact Section
+        $scope.fact_value_1 = 7;
+        $scope.fact_value_2 = 7;
+        $scope.fact_value_3 = 7;
+        $scope.fact_value_4 = 7;
+
     })
 
     .config(function($translateProvider){
@@ -157,6 +164,13 @@ angular.module('SmrWebSite.Main',  ['pascalprecht.translate'])
                 //Skill Section
                 skill_title_1:"Competenze Principali",
                 skill_title_2:"Competenze secondarie",
+                
+                //Fact Section 
+                fact_title_1:"Years of Experience",
+                fact_title_2:"Projects Done",
+                fact_title_3:"Happy Clients",
+                fact_title_4:"Awards Won",
+
 
                 //mywork Section
                 mywork_title:"Il mio Lavoro",
